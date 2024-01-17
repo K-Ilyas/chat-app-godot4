@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnfywhjs2i1tn"]
+
+[ext_resource type="Script" path="res://ChatLogs.gd" id="1_p5536"]
+
+[sub_resource type="SystemFont" id="SystemFont_bvsal"]
+subpixel_positioning = 0
+
+[sub_resource type="Theme" id="Theme_ee4h6"]
+default_base_scale = 0.24
+default_font = SubResource("SystemFont_bvsal")
+default_font_size = 20
+
+[sub_resource type="SystemFont" id="SystemFont_bu2lx"]
+font_weight = 425
+subpixel_positioning = 0
+
+[node name="PanelChatLogs" type="Panel"]
+custom_minimum_size = Vector2(100, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -707.0
+offset_bottom = -372.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ee4h6")
+script = ExtResource("1_p5536")
+metadata/_edit_group_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+offset_left = 27.0
+offset_top = 73.0
+offset_right = 412.0
+offset_bottom = 250.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -187.5
+offset_right = 187.5
+offset_bottom = 61.0
+grow_horizontal = 2
+theme_override_fonts/font = SubResource("SystemFont_bu2lx")
+theme_override_font_sizes/font_size = 30
+text = "Chat Logs"
+horizontal_alignment = 1
+vertical_alignment = 1

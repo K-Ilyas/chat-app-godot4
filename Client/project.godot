@@ -1,0 +1,22 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="final_chat_project_2"
+run/main_scene="res://ConnectServer.tscn"
+config/features=PackedStringArray("4.1", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Client="*res://client/client.gd"
+NetworkChat="*res://client/NetworkChat.gd"
+NetworkClock="*res://client/NetworkClock.tscn"

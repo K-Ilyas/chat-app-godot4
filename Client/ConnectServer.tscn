@@ -1,0 +1,86 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqlyicfoy60gc"]
+
+[ext_resource type="Script" path="res://ConnectServer.gd" id="1_kw7b1"]
+
+[node name="Node2D" type="Control"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 647.0
+script = ExtResource("1_kw7b1")
+
+[node name="Container" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 1150.0
+offset_bottom = 647.0
+
+[node name="adress" type="LineEdit" parent="Container"]
+layout_mode = 2
+offset_left = 469.0
+offset_top = 218.0
+offset_right = 708.0
+offset_bottom = 252.0
+placeholder_text = "IP Adress"
+
+[node name="port" type="LineEdit" parent="Container"]
+layout_mode = 2
+offset_left = 470.0
+offset_top = 268.0
+offset_right = 709.0
+offset_bottom = 302.0
+placeholder_text = "Port"
+
+[node name="nickname" type="LineEdit" parent="Container"]
+layout_mode = 2
+offset_left = 472.0
+offset_top = 319.0
+offset_right = 711.0
+offset_bottom = 353.0
+placeholder_text = "NickName"
+
+[node name="Button" type="Button" parent="Container"]
+layout_mode = 0
+offset_left = 522.0
+offset_top = 430.0
+offset_right = 660.0
+offset_bottom = 468.0
+text = "connect"
+
+[node name="title" type="Label" parent="Container"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -203.5
+offset_right = 92.0
+offset_bottom = -144.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Connection"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="error" type="Label" parent="Container"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = 41.5
+offset_right = 135.0
+offset_bottom = 85.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.858824, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Container/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c13qqqh7bjyh8"]
+
+[ext_resource type="Script" path="res://client/client.gd" id="1_vpng0"]
+
+[node name="client" type="Node"]
+script = ExtResource("1_vpng0")
+
+[connection signal="join_success" from="." to="." method="_on_join_success"]

@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwy3hbx4u5osc"]
+
+[ext_resource type="Script" path="res://MainTest.gd" id="1_wblyu"]
+[ext_resource type="PackedScene" uid="uid://nbsr0chgkdh" path="res://ChatWindow.tscn" id="2_xwuef"]
+[ext_resource type="PackedScene" uid="uid://d1gkn5dx4243c" path="res://PanelUserList.tscn" id="3_b1kr3"]
+[ext_resource type="PackedScene" uid="uid://bnfywhjs2i1tn" path="res://ChatLogs.tscn" id="4_ge4na"]
+
+[node name="ChatWindowTest" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wblyu")
+
+[node name="ChatWindow" parent="." instance=ExtResource("2_xwuef")]
+layout_mode = 0
+offset_left = 493.0
+offset_top = 32.0
+offset_right = 1120.0
+offset_bottom = 588.0
+
+[node name="PanelUserList" parent="." instance=ExtResource("3_b1kr3")]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 31.0
+offset_right = 462.0
+offset_bottom = 309.0
+
+[node name="PanelChatLogs" parent="." instance=ExtResource("4_ge4na")]
+layout_mode = 1
+offset_left = 35.0
+offset_top = 323.0
+offset_right = 462.0
+offset_bottom = 588.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 595.0
+offset_right = 195.0
+offset_bottom = 638.0
+text = "Logout"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 599.0
+offset_right = 620.0
+offset_bottom = 638.0
+text = "Server Time :"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="time" type="Label" parent="."]
+layout_mode = 0
+offset_left = 801.0
+offset_top = 602.0
+offset_right = 1118.0
+offset_bottom = 641.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="message_sent" from="ChatWindow" to="." method="_on_chat_window_message_sent"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

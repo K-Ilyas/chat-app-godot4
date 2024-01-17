@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1gkn5dx4243c"]
+
+[ext_resource type="Script" path="res://PanelUserList.gd" id="1_u20qd"]
+
+[node name="PanelUserList" type="Panel"]
+custom_minimum_size = Vector2(200, 200)
+offset_right = 359.0
+offset_bottom = 318.0
+script = ExtResource("1_u20qd")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 55.0
+offset_right = 323.0
+offset_bottom = 292.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="UserCount" type="Label" parent="."]
+layout_mode = 2
+offset_left = 77.0
+offset_top = 8.0
+offset_right = 260.0
+offset_bottom = 44.0
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1

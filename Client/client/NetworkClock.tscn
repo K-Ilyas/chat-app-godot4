@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr6jv23th4rpe"]
+
+[ext_resource type="Script" path="res://client/NetworkClock.gd" id="1_fxq64"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_fxq64")
