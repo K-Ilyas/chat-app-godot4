@@ -47,3 +47,11 @@ By continuously sending packets, it is therefore possible to estimate the averag
 
 ---
 
+## Screenshots
+### Connection interface
+![connexion](https://github.com/K-Ilyas/chat-app-godot4/assets/61426347/517b5b76-4fbd-4932-b561-57ddfb62de62)
+### Chat interface (main)
+![chat](https://github.com/K-Ilyas/chat-app-godot4/assets/61426347/9a845f20-4819-47f0-91b6-0b080cbd9251)
+
+
+
