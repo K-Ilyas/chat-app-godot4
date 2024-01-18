@@ -8,6 +8,8 @@ Godot has a Time singleton that offers methods for working with time1. The ISO 8
 UNIX time refers to the number of seconds elapsed since January 1, 1970. Note that systems, including Godot’s, offer an implementation that allows you to get the time with a higher precision than the second. Warning: as indicated in the documentation, the system time is subject to involuntary, but also voluntary, changes. The Time singleton offers two methods for making precise measurements: get_ticks_msecs and get_ticks_usecs, which give the time elapsed since the launch of the process, without it being possible to modify it. We will use them in parallel with get_unix_time_from_system. Also be careful to check the output types: the get_ticks methods return int, while get_unix_time_from_system returns a 64-bit float. To synchronize the clients with the server, we will simulate the Network Time Protocol to find the drift of the client clock.
 ![Screenshot 2024-01-18 010316](https://github.com/K-Ilyas/chat-app-godot4/assets/61426347/cd222774-cec1-4afa-b4ca-528f5fc83005)
 
+---
+
 ### Algorithm 1: Cristian's Algorithm
 
 **Data:** C is the client, S is the server  
