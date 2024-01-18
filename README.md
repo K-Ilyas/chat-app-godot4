@@ -1,3 +1,7 @@
+## Chat ( Server ~ client ) 
+
+A chat client server is a networked application that allows multiple users to communicate with each other in real time. In Godot, one way to implement a chat client server is to use the high-level multiplayer API and the remote procedure call (RPC) mechanism. RPCs are functions that can be called from one peer to another over the network, using annotations such as @rpc or @master. For a chat client server, we can use RPCs to send and receive messages between the clients and the server. The server can act as the authority that validates and broadcasts the messages, while the clients can display the messages on their user interface. To make the chat more interactive, we can also use RPCs to send information about the clients' status, such as their name, avatar, or typing activity.
+
 ## Clock and synchronization
 
 Godot has a Time singleton that offers methods for working with time1. The ISO 8601 standard describes the numerical representation of date and time in order to avoid confusion.
